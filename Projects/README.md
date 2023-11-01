@@ -67,6 +67,31 @@ mahsan@vmmint:~/Docker/Projects$
 mahsan@vmmint:~/Docker/Projects$ curl localhost:5000
 {"message":"Hello World Python v1"}mahsan@vmmint:~/Docker/Projects$ 
 
+mahsan@vmmint:~/Docker/Projects$ docker images
+REPOSITORY                    TAG       IMAGE ID       CREATED          SIZE
+msahsan1/hello-world-python   0.2       1a80b97e6a94   13 minutes ago   91.2MB
+mahsan@vmmint:~/Docker/Projects$ docker history 1a80b97e6a94
+IMAGE          CREATED          CREATED BY                                      SIZE      COMMENT
+1a80b97e6a94   13 minutes ago   CMD ["/bin/sh" "-c" "python ./launch.py"]       0B        buildkit.dockerfile.v0
+<missing>      13 minutes ago   EXPOSE map[5000/tcp:{}]                         0B        buildkit.dockerfile.v0
+<missing>      13 minutes ago   RUN /bin/sh -c pip install -r requirements.t…   11.1MB    buildkit.dockerfile.v0
+<missing>      13 minutes ago   COPY . /app # buildkit                          356B      buildkit.dockerfile.v0
+<missing>      13 minutes ago   WORKDIR /app                                    0B        buildkit.dockerfile.v0
+<missing>      3 years ago      /bin/sh -c #(nop)  CMD ["python3"]              0B        
+<missing>      3 years ago      /bin/sh -c set -ex;   wget -O get-pip.py "$P…   6.51MB    
+<missing>      3 years ago      /bin/sh -c #(nop)  ENV PYTHON_GET_PIP_SHA256…   0B        
+<missing>      3 years ago      /bin/sh -c #(nop)  ENV PYTHON_GET_PIP_URL=ht…   0B        
+<missing>      3 years ago      /bin/sh -c #(nop)  ENV PYTHON_PIP_VERSION=20…   0B        
+<missing>      3 years ago      /bin/sh -c cd /usr/local/bin  && ln -s idle3…   32B       
+<missing>      3 years ago      /bin/sh -c set -ex  && apk add --no-cache --…   67.4MB    
+<missing>      3 years ago      /bin/sh -c #(nop)  ENV PYTHON_VERSION=3.8.3     0B        
+<missing>      3 years ago      /bin/sh -c #(nop)  ENV GPG_KEY=E3FF2839C048B…   0B        
+<missing>      3 years ago      /bin/sh -c apk add --no-cache ca-certificates   551kB     
+<missing>      3 years ago      /bin/sh -c #(nop)  ENV LANG=C.UTF-8             0B        
+<missing>      3 years ago      /bin/sh -c #(nop)  ENV PATH=/usr/local/bin:/…   0B        
+<missing>      3 years ago      /bin/sh -c #(nop)  CMD ["/bin/sh"]              0B        
+<missing>      3 years ago      /bin/sh -c #(nop) ADD file:66a440394c2442570…   5.58MB    
+mahsan@vmmint:~/Docker/Projects$ 
 
 
 
