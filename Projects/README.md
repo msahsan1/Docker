@@ -1,5 +1,5 @@
-<h2> Docker </h2>
 <pre>
+<h2> Docker </h2>
 ahsan@vmmint:~/Docker/Projects$ docker build -t msahsan1/hello-world-python:0.2 .
 [+] Building 15.4s (9/9) FINISHED                                                                                            docker:default
  => [internal] load build definition from Dockerfile                                                                                   0.1s
